@@ -1,0 +1,973 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&lt;no title&gt; &#8212; Jupyter Book Template</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/IV eindproject';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="home.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Jupyter Book Template</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="home.html">
+                    Jupyter Book Tutorial
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="notebook.html">Information visualisation project</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/yenchiah/jupyter-book-template/blob/main/docs/docs/IV eindproject.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/yenchiah/jupyter-book-template" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/yenchiah/jupyter-book-template/issues/new?title=Issue%20on%20page%20%2Fdocs/IV eindproject.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/docs/IV eindproject.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div style="text-align:center; font-size:70px; font-family:'Comic Sans MS'; font-weight:bold; margin:50px 0;">
+<span style="color:#FFB4EE">g</span><span style="color:#FF6B00">e</span><span style="color:#FFA433">l</span><span style="color:#FFD525">u</span><span style="color:#B3BD3B">k</span><span style="color:#A0CAC9">z</span><span style="color:#FFB4EE">a</span><span style="color:#FF6B00">l</span><span style="color:#FFA433">i</span><span style="color:#FFD525">g</span><span style="color:#B3BD3B">h</span><span style="color:#A0CAC9">e</span><span style="color:#FFB4EE">i</span><span style="color:#FF6B00">d</span>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
+
+<span class="n">gif_path</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;C:\Users\tatum\InformatievisualsatieEindproject\regenboog GIF.gif&quot;</span>
+
+<span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="n">gif_path</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">gif_path</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;C:\Users\tatum\InformatievisualsatieEindproject\regenboog GIF.gif&quot;</span>
+<span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="n">gif_path</span><span class="p">)</span>
+
+<span class="nn">File ~\anaconda3\envs\jupyterbook\lib\site-packages\IPython\core\display.py:970,</span> in <span class="ni">Image.__init__</span><span class="nt">(self, data, url, filename, format, embed, width, height, retina, unconfined, metadata, alt)</span>
+<span class="g g-Whitespace">    </span><span class="mi">968</span> <span class="bp">self</span><span class="o">.</span><span class="n">unconfined</span> <span class="o">=</span> <span class="n">unconfined</span>
+<span class="g g-Whitespace">    </span><span class="mi">969</span> <span class="bp">self</span><span class="o">.</span><span class="n">alt</span> <span class="o">=</span> <span class="n">alt</span>
+<span class="ne">--&gt; </span><span class="mi">970</span> <span class="nb">super</span><span class="p">(</span><span class="n">Image</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="n">filename</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">971</span>         <span class="n">metadata</span><span class="o">=</span><span class="n">metadata</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">973</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;width&#39;</span><span class="p">,</span> <span class="p">{}):</span>
+<span class="g g-Whitespace">    </span><span class="mi">974</span>     <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;width&#39;</span><span class="p">]</span>
+
+<span class="nn">File ~\anaconda3\envs\jupyterbook\lib\site-packages\IPython\core\display.py:327,</span> in <span class="ni">DisplayObject.__init__</span><span class="nt">(self, data, url, filename, metadata)</span>
+<span class="g g-Whitespace">    </span><span class="mi">324</span> <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">325</span>     <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="ne">--&gt; </span><span class="mi">327</span> <span class="bp">self</span><span class="o">.</span><span class="n">reload</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">328</span> <span class="bp">self</span><span class="o">.</span><span class="n">_check_data</span><span class="p">()</span>
+
+<span class="nn">File ~\anaconda3\envs\jupyterbook\lib\site-packages\IPython\core\display.py:1005,</span> in <span class="ni">Image.reload</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1003</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;Reload the raw data from file or URL.&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1004</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">embed</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1005</span>     <span class="nb">super</span><span class="p">(</span><span class="n">Image</span><span class="p">,</span><span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">reload</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1006</span>     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">retina</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1007</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_retina_shape</span><span class="p">()</span>
+
+<span class="nn">File ~\anaconda3\envs\jupyterbook\lib\site-packages\IPython\core\display.py:353,</span> in <span class="ni">DisplayObject.reload</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">351</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">filename</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">352</span>     <span class="n">encoding</span> <span class="o">=</span> <span class="kc">None</span> <span class="k">if</span> <span class="s2">&quot;b&quot;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_read_flags</span> <span class="k">else</span> <span class="s2">&quot;utf-8&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">353</span>     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">filename</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_read_flags</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">354</span>         <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">355</span> <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">url</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">356</span>     <span class="c1"># Deferred import</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;C:\\Users\\tatum\\InformatievisualsatieEindproject\\regenboog GIF.gif&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div style="text-align:center; font-size:30px; font-family:'Comic Sans MS'; font-weight:bold; margin:50px 0;">
+<span style="color:#FFB4EE">i</span><span style="color:#FF6B00">n</span><span style="color:#FFA433">t</span><span style="color:#FFD525">r</span><span style="color:#B3BD3B">o</span><span style="color:#A0CAC9">d</span><span style="color:#FFB4EE">u</span><span style="color:#FF6B00">c</span><span style="color:#FFA433">t</span><span style="color:#FFD525">i</span><span style="color:#B3BD3B">e</span>
+</div>
+<div style="text-align:center; font-weight:bold; color: black; margin:50px 0; -webkit-text-stroke: 2px blue;">
+Geluk speelt een rol in ieders leven (Grafiek 1). In een wereld waar vrijheid en geluk twee fundamentele pijlers van welzijn zijn, onderzoeken we diepgaand de boeiende interactie tussen beide. Door de lens van data-analyse richten we onze blik op de impact van de vrijheid die een land zijn volk biedt, evenals de invloed van het weer op het geluk van zijn bevolking.
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib.colors</span> <span class="k">as</span> <span class="nn">mcolors</span>
+
+<span class="c1"># Read the dataset into a DataFrame</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\tatum\Downloads\merged_df_happy_2019.csv&quot;</span><span class="p">)</span>
+
+<span class="c1"># Read the shapefile containing the world map</span>
+<span class="n">world</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">gpd</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">get_path</span><span class="p">(</span><span class="s1">&#39;naturalearth_lowres&#39;</span><span class="p">))</span>
+
+<span class="c1"># Create a dictionary that maps the country names in your dataset to the corresponding country names in the world GeoDataFrame</span>
+<span class="n">name_map</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;United States&#39;</span><span class="p">:</span> <span class="s1">&#39;United States of America&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="c1"># Replace the country names in your DataFrame using the name_map dictionary</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Country or region&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Country or region&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">name_map</span><span class="p">)</span>
+
+<span class="c1"># Merge the two DataFrames on the country name</span>
+<span class="n">merged</span> <span class="o">=</span> <span class="n">world</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="n">right_on</span><span class="o">=</span><span class="s1">&#39;Country or region&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+
+<span class="c1"># Create a custom color map</span>
+<span class="n">cmap</span> <span class="o">=</span> <span class="n">mcolors</span><span class="o">.</span><span class="n">LinearSegmentedColormap</span><span class="o">.</span><span class="n">from_list</span><span class="p">(</span><span class="s2">&quot;mycmap&quot;</span><span class="p">,</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;#0000ff&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.25</span><span class="p">,</span> <span class="s1">&#39;#9400d3&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="s1">&#39;#ff69b4&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.75</span><span class="p">,</span> <span class="s1">&#39;#ffa500&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;#ffff00&#39;</span><span class="p">]])</span>
+
+<span class="c1"># Plot the world map with the happiness score as the color</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">merged</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s1">&#39;happiness_score&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cmap</span><span class="p">,</span> <span class="n">missing_kwds</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;lightgrey&#39;</span><span class="p">})</span>
+
+<span class="c1"># Remove x and y axis tick labels</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">([])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">([])</span>
+
+<span class="c1"># Add a title to the plot</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Het gevoel van gelukzaligheid op de aarde&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\tatum\AppData\Local\Temp\ipykernel_19876\2162191878.py:10: FutureWarning:
+
+The geopandas.dataset module is deprecated and will be removed in GeoPandas 1.0. You can get the original &#39;naturalearth_lowres&#39; data from https://www.naturalearthdata.com/downloads/110m-cultural-vectors/.
+</pre></div>
+</div>
+<img alt="../_images/a012cc4cbecf562b092d267b6ee80233fa421cb66493a6affb6caec7396b697b.png" src="../_images/a012cc4cbecf562b092d267b6ee80233fa421cb66493a6affb6caec7396b697b.png" />
+</div>
+</div>
+<p>Grafiek 1: Deze grafiek toont de verdeling van het geluksgevoel wereldwijd. De geluksscores zijn gebaseerd op zelfrapportage, waarbij hogere scores wijzen op een groter gevoel van geluk, terwijl lagere scores duiden op een lager geluksniveau. De grijze gebieden op de grafiek bevatten geen beschikbare gegevens en zijn niet meegenomen in de berekeningen.</p>
+<div style="text-align:center; font-size:30px; font-family:'Comic Sans MS'; font-weight:bold; margin:50px 0;">
+<span style="color:#FFB4EE">S</span><span style="color:#FF6B00">t</span><span style="color:#FFA433">e</span><span style="color:#FFD525">l</span><span style="color:#B3BD3B">l</span><span style="color:#A0CAC9">i</span><span style="color:#FFB4EE">n</span><span style="color:#FF6B00">g</span><span style="color:#FFA433">:</span>
+</div>
+<div style="text-align:center; font-weight:bold; color: black; margin:50px 0; -webkit-text-stroke: 2px blue;">
+Vrijheid die een overheid kan bieden aan haar volk, heeft een positieve invloed op de gelukzaligheid van haar burgers.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">plotly.graph_objects</span> <span class="k">as</span> <span class="nn">go</span>
+<span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib.colors</span> <span class="k">as</span> <span class="nn">mcolors</span>
+<span class="kn">from</span> <span class="nn">matplotlib.colors</span> <span class="kn">import</span> <span class="n">LinearSegmentedColormap</span>
+<span class="kn">from</span> <span class="nn">plotly.subplots</span> <span class="kn">import</span> <span class="n">make_subplots</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">linregress</span>
+
+<span class="c1"># Lees het CSV-bestand met gegevens over landen</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\tatum\Desktop\Informatievisualisatie\datasetgroot.csv&quot;</span><span class="p">)</span>
+
+<span class="c1"># Bereken de gemiddelde geluksscore, het gemiddelde overheidsvertrouwen en de gemiddelde vrijheid</span>
+<span class="n">mean_happiness</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;happiness_score&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">mean_trust</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;government_trust&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">mean_freedom</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;freedom&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="c1"># Centreer de gegevens rond het nulpunt</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;happiness_score_centered&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;happiness_score&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">mean_happiness</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;government_trust_centered&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;government_trust&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">mean_trust</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;freedom_centered&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;freedom&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">mean_freedom</span>
+
+<span class="c1"># Create a custom colormap that goes from blue to purple to pink to orange to yellow</span>
+<span class="n">cmap</span> <span class="o">=</span> <span class="n">LinearSegmentedColormap</span><span class="o">.</span><span class="n">from_list</span><span class="p">(</span><span class="s1">&#39;BluePurplePinkOrangeYellow&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;#0000ff&#39;</span><span class="p">,</span> <span class="s1">&#39;#9400d3&#39;</span><span class="p">,</span> <span class="s1">&#39;#ff69b4&#39;</span><span class="p">,</span> <span class="s1">&#39;#ffa500&#39;</span><span class="p">,</span> <span class="s1">&#39;#ffff00&#39;</span><span class="p">])</span>
+<span class="n">norm</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">Normalize</span><span class="p">(</span><span class="n">vmin</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;happiness_score&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;happiness_score&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;happiness_color&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;happiness_score&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">cmap</span><span class="p">(</span><span class="n">norm</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
+
+<span class="c1"># Convert the RGBA values to a valid CSS color string</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;happiness_color&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;happiness_color&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">mcolors</span><span class="o">.</span><span class="n">to_hex</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+
+<span class="c1"># Maak een figuur met een aangepaste grootte en drie subplots</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">make_subplots</span><span class="p">(</span><span class="n">rows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="c1"># Plot the gegevens als tekst in plaats van punten met een grotere tekstgrootte en aangepaste lettertype voor de eerste subplot</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span>
+        <span class="n">x</span><span class="o">=</span><span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;government_trust_centered&#39;</span><span class="p">]],</span>
+        <span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;freedom_centered&#39;</span><span class="p">]],</span>
+        <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;text&#39;</span><span class="p">,</span>
+        <span class="n">text</span><span class="o">=</span><span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;Country&#39;</span><span class="p">][:</span><span class="mi">3</span><span class="p">]],</span>
+        <span class="n">hovertext</span><span class="o">=</span><span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;Country&#39;</span><span class="p">]],</span>
+        <span class="n">textposition</span><span class="o">=</span><span class="s1">&#39;bottom center&#39;</span><span class="p">,</span>
+        <span class="n">textfont</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+            <span class="n">size</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span>
+            <span class="n">color</span><span class="o">=</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;happiness_color&#39;</span><span class="p">],</span>
+            <span class="n">family</span><span class="o">=</span><span class="s1">&#39;Arial Black&#39;</span>
+        <span class="p">),</span>
+        <span class="n">hovertemplate</span><span class="o">=</span><span class="s1">&#39;&lt;b&gt;%</span><span class="si">{hovertext}</span><span class="s1">&lt;/b&gt;&#39;</span><span class="p">,</span>
+        <span class="n">hoverlabel</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+            <span class="n">bgcolor</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span>
+            <span class="n">font</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+                <span class="n">size</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span>
+                <span class="n">color</span><span class="o">=</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;happiness_color&#39;</span><span class="p">]</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+    <span class="p">),</span> <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Plot the correlation between freedom and government trust for the second subplot</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;government_trust&#39;</span><span class="p">],</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;freedom&#39;</span><span class="p">],</span>
+    <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;markers&#39;</span><span class="p">,</span>
+    <span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+        <span class="n">color</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;happiness_color&#39;</span><span class="p">]</span>
+    <span class="p">),</span>
+    <span class="n">showlegend</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">hovertemplate</span><span class="o">=</span><span class="s1">&#39;&lt;b&gt;%</span><span class="si">{hovertext}</span><span class="s1">&lt;/b&gt;&#39;</span><span class="p">,</span>
+    <span class="n">hoverlabel</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+        <span class="n">bgcolor</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span>
+        <span class="n">font</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+            <span class="n">size</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span>
+            <span class="n">color</span><span class="o">=</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;happiness_color&#39;</span><span class="p">]</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+<span class="p">),</span> <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># Calculate the linear regression between freedom and government trust and add a correlation line to the second subplot</span>
+<span class="n">slope</span><span class="p">,</span> <span class="n">intercept</span><span class="p">,</span> <span class="n">r_value</span><span class="p">,</span> <span class="n">p_value</span><span class="p">,</span> <span class="n">std_err</span> <span class="o">=</span> <span class="n">linregress</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;government_trust&#39;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;freedom&#39;</span><span class="p">])</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;government_trust&#39;</span><span class="p">],</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">slope</span> <span class="o">*</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;government_trust&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">intercept</span><span class="p">,</span>
+    <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;lines&#39;</span><span class="p">,</span>
+    <span class="n">line</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+        <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span>
+    <span class="p">),</span>
+    <span class="n">showlegend</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="p">),</span> <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># Plot the correlation between government trust and happiness for the third subplot</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;government_trust&#39;</span><span class="p">],</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;happiness_score&#39;</span><span class="p">],</span>
+    <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;markers&#39;</span><span class="p">,</span>
+    <span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+        <span class="n">color</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;happiness_color&#39;</span><span class="p">]</span>
+    <span class="p">),</span>
+    <span class="n">showlegend</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">hovertemplate</span><span class="o">=</span><span class="s1">&#39;&lt;b&gt;%</span><span class="si">{hovertext}</span><span class="s1">&lt;/b&gt;&#39;</span><span class="p">,</span>
+    <span class="n">hoverlabel</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+        <span class="n">bgcolor</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span>
+        <span class="n">font</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+            <span class="n">size</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span>
+            <span class="n">color</span><span class="o">=</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;happiness_color&#39;</span><span class="p">]</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+<span class="p">),</span> <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="c1"># Calculate the linear regression between government trust and happiness and add a correlation line to the third subplot</span>
+<span class="n">slope</span><span class="p">,</span> <span class="n">intercept</span><span class="p">,</span> <span class="n">r_value</span><span class="p">,</span> <span class="n">p_value</span><span class="p">,</span> <span class="n">std_err</span> <span class="o">=</span> <span class="n">linregress</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;government_trust&#39;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;happiness_score&#39;</span><span class="p">])</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;government_trust&#39;</span><span class="p">],</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">slope</span> <span class="o">*</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;government_trust&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">intercept</span><span class="p">,</span>
+    <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;lines&#39;</span><span class="p">,</span>
+    <span class="n">line</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+        <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span>
+    <span class="p">),</span>
+    <span class="n">showlegend</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="p">),</span> <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="c1"># Add a colorbar to the figure</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="p">[</span><span class="kc">None</span><span class="p">],</span>
+    <span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="kc">None</span><span class="p">],</span>
+    <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;markers&#39;</span><span class="p">,</span>
+    <span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+        <span class="n">size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">color</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;happiness_score&#39;</span><span class="p">],</span>
+        <span class="n">colorscale</span><span class="o">=</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;#0000ff&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.25</span><span class="p">,</span> <span class="s1">&#39;#9400d3&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="s1">&#39;#ff69b4&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.75</span><span class="p">,</span> <span class="s1">&#39;#ffa500&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;#ffff00&#39;</span><span class="p">]],</span>
+        <span class="n">cmin</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;happiness_score&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="n">cmax</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;happiness_score&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="n">showscale</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">colorbar</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+            <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Geluksscore&#39;</span><span class="p">,</span>
+            <span class="n">tickvals</span><span class="o">=</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;happiness_score&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;happiness_score&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()],</span>
+            <span class="n">ticktext</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Min&#39;</span><span class="p">,</span> <span class="s1">&#39;Max&#39;</span><span class="p">]</span>
+        <span class="p">)</span>
+    <span class="p">),</span>
+    <span class="n">showlegend</span><span class="o">=</span><span class="kc">False</span>
+<span class="p">))</span>
+
+<span class="c1"># Pas de opmaak van de plot aan</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Overheidsvertrouwen en vrijheid&#39;</span><span class="p">,</span>
+    <span class="n">showlegend</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">xaxis</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+        <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Overheidsvertrouwen&#39;</span><span class="p">,</span>
+        <span class="n">zeroline</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">zerolinecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span>
+        <span class="n">showline</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">showgrid</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">linecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span>
+        <span class="n">mirror</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">showticklabels</span><span class="o">=</span><span class="kc">False</span>
+    <span class="p">),</span>
+    <span class="n">yaxis</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+        <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Vrijheid&#39;</span><span class="p">,</span>
+        <span class="n">zeroline</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">zerolinecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span>
+        <span class="n">showline</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">showgrid</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">linecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span>
+        <span class="n">mirror</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">showticklabels</span><span class="o">=</span><span class="kc">False</span>
+    <span class="p">),</span>
+    <span class="n">xaxis2</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+        <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Overheidsvertrouwen&#39;</span>
+    <span class="p">),</span>
+    <span class="n">yaxis2</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+        <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Vrijheid&#39;</span>
+    <span class="p">),</span>
+    <span class="n">xaxis3</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+        <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Overheidsvertrouwen&#39;</span>
+    <span class="p">),</span>
+    <span class="n">yaxis3</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+        <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Geluksscore&#39;</span>
+    <span class="p">),</span>
+    <span class="n">plot_bgcolor</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span>
+    <span class="n">paper_bgcolor</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span>
+    <span class="n">width</span><span class="o">=</span><span class="mi">1200</span><span class="p">,</span>
+    <span class="n">height</span><span class="o">=</span><span class="mi">500</span>
+<span class="p">)</span>
+
+<span class="c1"># Toon de interactieve plot</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>                            <div id="ce397953-dd95-4bf0-ad4e-f3290236babd" class="plotly-graph-div" style="height:500px; width:1200px;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("ce397953-dd95-4bf0-ad4e-f3290236babd")) {                    Plotly.newPlot(                        "ce397953-dd95-4bf0-ad4e-f3290236babd",                        [{"hoverlabel":{"bgcolor":"white","font":{"color":"#ffc900","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Denmark"],"mode":"text","text":["Den"],"textfont":{"color":"#ffc900","family":"Arial Black","size":14},"textposition":"bottom center","x":[0.3082807894736842],"y":[0.2002594736842105],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ffc800","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Switzerland"],"mode":"text","text":["Swi"],"textfont":{"color":"#ffc800","family":"Arial Black","size":14},"textposition":"bottom center","x":[0.27578078947368423],"y":[0.20641947368421054],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ffc800","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Iceland"],"mode":"text","text":["Ice"],"textfont":{"color":"#ffc800","family":"Arial Black","size":14},"textposition":"bottom center","x":[0.013500789473684188],"y":[0.18708947368421047],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ffc800","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Norway"],"mode":"text","text":["Nor"],"textfont":{"color":"#ffc800","family":"Arial Black","size":14},"textposition":"bottom center","x":[0.22151078947368422],"y":[0.21693947368421052],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ffc200","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Finland"],"mode":"text","text":["Fin"],"textfont":{"color":"#ffc200","family":"Arial Black","size":14},"textposition":"bottom center","x":[0.2737907894736842],"y":[0.1918894736842105],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ffc200","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Canada"],"mode":"text","text":["Can"],"textfont":{"color":"#ffc200","family":"Arial Black","size":14},"textposition":"bottom center","x":[0.1770407894736842],"y":[0.1945494736842105],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ffbf00","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Netherlands"],"mode":"text","text":["Net"],"textfont":{"color":"#ffbf00","family":"Arial Black","size":14},"textposition":"bottom center","x":[0.16302078947368417],"y":[0.1729594736842105],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ffbe00","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["New Zealand"],"mode":"text","text":["New"],"textfont":{"color":"#ffbe00","family":"Arial Black","size":14},"textposition":"bottom center","x":[0.2827907894736842],"y":[0.20231947368421055],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ffbd00","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Sweden"],"mode":"text","text":["Swe"],"textfont":{"color":"#ffbd00","family":"Arial Black","size":14},"textposition":"bottom center","x":[0.2724207894736842],"y":[0.20302947368421054],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ffbb00","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Israel"],"mode":"text","text":["Isr"],"textfont":{"color":"#ffbb00","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.04896921052631581],"y":[-0.014830526315789516],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ffb300","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Austria"],"mode":"text","text":["Aus"],"textfont":{"color":"#ffb300","family":"Arial Black","size":14},"textposition":"bottom center","x":[0.0772307894736842],"y":[0.16439947368421048],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ffb100","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Costa Rica"],"mode":"text","text":["Cos"],"textfont":{"color":"#ffb100","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.03077921052631581],"y":[0.17309947368421053],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ffac00","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Germany"],"mode":"text","text":["Ger"],"textfont":{"color":"#ffac00","family":"Arial Black","size":14},"textposition":"bottom center","x":[0.14926078947368418],"y":[0.15550947368421053],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ffaa00","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Brazil"],"mode":"text","text":["Bra"],"textfont":{"color":"#ffaa00","family":"Arial Black","size":14},"textposition":"bottom center","x":[0.005410789473684202],"y":[0.025099473684210505],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ffa900","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Belgium"],"mode":"text","text":["Bel"],"textfont":{"color":"#ffa900","family":"Arial Black","size":14},"textposition":"bottom center","x":[0.12623078947368419],"y":[0.1343894736842105],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ffa700","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Ireland"],"mode":"text","text":["Ire"],"textfont":{"color":"#ffa700","family":"Arial Black","size":14},"textposition":"bottom center","x":[0.16129078947368422],"y":[0.1609294736842105],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ffa600","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Luxembourg"],"mode":"text","text":["Lux"],"textfont":{"color":"#ffa600","family":"Arial Black","size":14},"textposition":"bottom center","x":[0.2170407894736842],"y":[0.16954947368421047],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ffa209","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Mexico"],"mode":"text","text":["Mex"],"textfont":{"color":"#ffa209","family":"Arial Black","size":14},"textposition":"bottom center","x":[0.047300789473684185],"y":[-0.0020605263157895126],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ffa00f","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Singapore"],"mode":"text","text":["Sin"],"textfont":{"color":"#ffa00f","family":"Arial Black","size":14},"textposition":"bottom center","x":[0.33362078947368423],"y":[0.10854947368421053],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ff9f12","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Chile"],"mode":"text","text":["Chi"],"textfont":{"color":"#ff9f12","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.021739210526315805],"y":[-0.0012605263157894897],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ff9f12","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Panama"],"mode":"text","text":["Pan"],"textfont":{"color":"#ff9f12","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.05201921052631581],"y":[0.11011947368421049],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ff9d17","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Argentina"],"mode":"text","text":["Arg"],"textfont":{"color":"#ff9d17","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.06328921052631581],"y":[0.0436894736842105],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ff9a20","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["United Arab Emirates"],"mode":"text","text":["Uni"],"textfont":{"color":"#ff9a20","family":"Arial Black","size":14},"textposition":"bottom center","x":[0.21936078947368418],"y":[0.18299947368421055],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ff9923","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Uruguay"],"mode":"text","text":["Uru"],"textfont":{"color":"#ff9923","family":"Arial Black","size":14},"textposition":"bottom center","x":[0.07769078947368419],"y":[0.16472947368421054],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ff9828","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Malta"],"mode":"text","text":["Mal"],"textfont":{"color":"#ff9828","family":"Arial Black","size":14},"textposition":"bottom center","x":[0.039290789473684196],"y":[0.1707894736842105],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ff972b","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Colombia"],"mode":"text","text":["Col"],"textfont":{"color":"#ff972b","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.0822592105263158],"y":[0.06819947368421053],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ff972b","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["France"],"mode":"text","text":["Fra"],"textfont":{"color":"#ff972b","family":"Arial Black","size":14},"textposition":"bottom center","x":[0.04183078947368418],"y":[0.08646947368421048],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ff972b","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Thailand"],"mode":"text","text":["Tha"],"textfont":{"color":"#ff972b","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.10791921052631581],"y":[0.11637947368421053],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ff9336","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Saudi Arabia"],"mode":"text","text":["Sau"],"textfont":{"color":"#ff9336","family":"Arial Black","size":14},"textposition":"bottom center","x":[0.1638307894736842],"y":[-0.00011052631578950534],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ff9336","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Spain"],"mode":"text","text":["Spa"],"textfont":{"color":"#ff9336","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.0748792105263158],"y":[-0.0037005263157894874],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ff913c","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Guatemala"],"mode":"text","text":["Gua"],"textfont":{"color":"#ff913c","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.0492392105263158],"y":[0.12463947368421047],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ff8e44","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Kuwait"],"mode":"text","text":["Kuw"],"textfont":{"color":"#ff8e44","family":"Arial Black","size":14},"textposition":"bottom center","x":[0.1004407894736842],"y":[0.052509473684210495],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ff8d47","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Bahrain"],"mode":"text","text":["Bah"],"textfont":{"color":"#ff8d47","family":"Arial Black","size":14},"textposition":"bottom center","x":[0.1214707894736842],"y":[0.09459947368421051],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ff8955","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Slovakia"],"mode":"text","text":["Slo"],"textfont":{"color":"#ff8955","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.10677921052631581],"y":[-0.1452405263157895],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ff8858","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["El Salvador"],"mode":"text","text":["El "],"textfont":{"color":"#ff8858","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.030119210526315804],"y":[-0.006460526315789472],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ff865e","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Malaysia"],"mode":"text","text":["Mal"],"textfont":{"color":"#ff865e","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.045439210526315804],"y":[0.011159473684210497],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ff865e","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Nicaragua"],"mode":"text","text":["Nic"],"textfont":{"color":"#ff865e","family":"Arial Black","size":14},"textposition":"bottom center","x":[0.026670789473684203],"y":[0.08666947368421052],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ff8561","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Uzbekistan"],"mode":"text","text":["Uzb"],"textfont":{"color":"#ff8561","family":"Arial Black","size":14},"textposition":"bottom center","x":[0.14708078947368422],"y":[0.22932947368421053],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ff8561","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Italy"],"mode":"text","text":["Ita"],"textfont":{"color":"#ff8561","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.1106892105263158],"y":[-0.1908805263157895],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ff8561","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Ecuador"],"mode":"text","text":["Ecu"],"textfont":{"color":"#ff8561","family":"Arial Black","size":14},"textposition":"bottom center","x":[0.0441207894736842],"y":[0.02354947368421051],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ff8366","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Japan"],"mode":"text","text":["Jap"],"textfont":{"color":"#ff8366","family":"Arial Black","size":14},"textposition":"bottom center","x":[0.053600789473684185],"y":[0.08845947368421053],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ff8366","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Kazakhstan"],"mode":"text","text":["Kaz"],"textfont":{"color":"#ff8366","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.024929210526315804],"y":[0.02604947368421051],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ff7f72","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Poland"],"mode":"text","text":["Pol"],"textfont":{"color":"#ff7f72","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.08124921052631581],"y":[0.07274947368421053],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ff7f72","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Lithuania"],"mode":"text","text":["Lit"],"textfont":{"color":"#ff7f72","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.11804921052631581],"y":[-0.18986052631578948],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ff7e74","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Belarus"],"mode":"text","text":["Bel"],"textfont":{"color":"#ff7e74","family":"Arial Black","size":14},"textposition":"bottom center","x":[0.0383207894736842],"y":[-0.08824052631578949],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ff7d77","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Slovenia"],"mode":"text","text":["Slo"],"textfont":{"color":"#ff7d77","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.09989921052631581],"y":[0.1524894736842105],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ff7c7a","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Peru"],"mode":"text","text":["Per"],"textfont":{"color":"#ff7c7a","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.08332921052631581],"y":[-0.004130526315789473],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ff7888","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Libya"],"mode":"text","text":["Lib"],"textfont":{"color":"#ff7888","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.03285921052631581],"y":[0.027569473684210533],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ff768e","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Latvia"],"mode":"text","text":["Lat"],"textfont":{"color":"#ff768e","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.0473492105263158],"y":[-0.0991905263157895],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ff7591","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Cyprus"],"mode":"text","text":["Cyp"],"textfont":{"color":"#ff7591","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.08396921052631581],"y":[-0.0840805263157895],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ff7591","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Paraguay"],"mode":"text","text":["Par"],"textfont":{"color":"#ff7591","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.06228921052631581],"y":[0.08319947368421049],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ff7591","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Romania"],"mode":"text","text":["Rom"],"textfont":{"color":"#ff7591","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.12945921052631582],"y":[-0.012030526315789491],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ff7494","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Estonia"],"mode":"text","text":["Est"],"textfont":{"color":"#ff7494","family":"Arial Black","size":14},"textposition":"bottom center","x":[0.04894078947368419],"y":[0.035959473684210486],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ff7494","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Jamaica"],"mode":"text","text":["Jam"],"textfont":{"color":"#ff7494","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.0933092105263158],"y":[0.05681947368421053],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ff7396","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Croatia"],"mode":"text","text":["Cro"],"textfont":{"color":"#ff7396","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.0962292105263158],"y":[-0.1400805263157895],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ff6caa","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Indonesia"],"mode":"text","text":["Ind"],"textfont":{"color":"#ff6caa","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.1330292105263158],"y":[0.013219473684210503],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ff6caa","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Jordan"],"mode":"text","text":["Jor"],"textfont":{"color":"#ff6caa","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.003279210526315801],"y":[-0.0189205263157895],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ff6bad","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Azerbaijan"],"mode":"text","text":["Aze"],"textfont":{"color":"#ff6bad","family":"Arial Black","size":14},"textposition":"bottom center","x":[0.04289078947368419],"y":[-0.02588052631578952],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ff6bad","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Philippines"],"mode":"text","text":["Phi"],"textfont":{"color":"#ff6bad","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.018679210526315812],"y":[0.16938947368421053],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ff6ab0","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["China"],"mode":"text","text":["Chi"],"textfont":{"color":"#ff6ab0","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.1087992105263158],"y":[0.06096947368421052],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#fc67b5","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Kyrgyzstan"],"mode":"text","text":["Kyr"],"textfont":{"color":"#fc67b5","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.08862921052631581],"y":[0.022969473684210484],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#fc67b5","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Serbia"],"mode":"text","text":["Ser"],"textfont":{"color":"#fc67b5","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.09285921052631581],"y":[-0.2219705263157895],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#fb65b5","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Bosnia and Herzegovina"],"mode":"text","text":["Bos"],"textfont":{"color":"#fb65b5","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.1362492105263158],"y":[-0.28404052631578947],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#fb65b5","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Montenegro"],"mode":"text","text":["Mon"],"textfont":{"color":"#fb65b5","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.009039210526315816],"y":[-0.2280405263157895],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#fb65b5","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Dominican Republic"],"mode":"text","text":["Dom"],"textfont":{"color":"#fb65b5","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.01252921052631581],"y":[0.1434394736842105],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#fb65b5","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Morocco"],"mode":"text","text":["Mor"],"textfont":{"color":"#fb65b5","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.0522092105263158],"y":[-0.12269052631578947],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#fb65b5","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Hungary"],"mode":"text","text":["Hun"],"textfont":{"color":"#fb65b5","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.0915292105263158],"y":[-0.1814505263157895],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#f963b6","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Pakistan"],"mode":"text","text":["Pak"],"textfont":{"color":"#f963b6","family":"Arial Black","size":14},"textposition":"bottom center","x":[0.0025507894736842007],"y":[-0.2329305263157895],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#f963b6","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Lebanon"],"mode":"text","text":["Leb"],"textfont":{"color":"#f963b6","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.10563921052631581],"y":[-0.11687052631578948],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#f963b6","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Portugal"],"mode":"text","text":["Por"],"textfont":{"color":"#f963b6","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.1210392105263158],"y":[0.06811947368421051],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#f660b7","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Vietnam"],"mode":"text","text":["Vie"],"textfont":{"color":"#f660b7","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.02068921052631581],"y":[0.18038947368421054],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#f45eb7","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Tunisia"],"mode":"text","text":["Tun"],"textfont":{"color":"#f45eb7","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.05454921052631581],"y":[-0.1436205263157895],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#f25db8","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Greece"],"mode":"text","text":["Gre"],"textfont":{"color":"#f25db8","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.0949792105263158],"y":[-0.3209305263157895],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ec56ba","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Mongolia"],"mode":"text","text":["Mon"],"textfont":{"color":"#ec56ba","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.10339921052631582],"y":[-0.01943052631578951],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#e853bb","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Nigeria"],"mode":"text","text":["Nig"],"textfont":{"color":"#e853bb","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.1057492105263158],"y":[-0.10061052631578948],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#e853bb","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Honduras"],"mode":"text","text":["Hon"],"textfont":{"color":"#e853bb","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.06718921052631581],"y":[-0.11160052631578948],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#e34ebc","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Zambia"],"mode":"text","text":["Zam"],"textfont":{"color":"#e34ebc","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.021459210526315803],"y":[0.047469473684210506],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#e34ebc","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Nepal"],"mode":"text","text":["Nep"],"textfont":{"color":"#e34ebc","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.0661692105263158],"y":[-0.009030526315789489],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#db46be","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Albania"],"mode":"text","text":["Alb"],"textfont":{"color":"#db46be","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.0832392105263158],"y":[-0.060490526315789495],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#d944bf","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Bangladesh"],"mode":"text","text":["Ban"],"textfont":{"color":"#d944bf","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.010419210526315809],"y":[0.01862947368421053],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#d944bf","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Sierra Leone"],"mode":"text","text":["Sie"],"textfont":{"color":"#d944bf","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.0542892105263158],"y":[-0.07230052631578948],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#d641c0","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Iraq"],"mode":"text","text":["Ira"],"textfont":{"color":"#d641c0","family":"Arial Black","size":14},"textposition":"bottom center","x":[0.000110789473684203],"y":[-0.1305905263157895],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#d13cc1","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Cameroon"],"mode":"text","text":["Cam"],"textfont":{"color":"#d13cc1","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.0749892105263158],"y":[0.048209473684210524],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#d13cc1","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Ethiopia"],"mode":"text","text":["Eth"],"textfont":{"color":"#d13cc1","family":"Arial Black","size":14},"textposition":"bottom center","x":[0.035450789473684186],"y":[-0.01212052631578947],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#cd38c2","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["South Africa"],"mode":"text","text":["Sou"],"textfont":{"color":"#cd38c2","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.0520992105263158],"y":[0.04567947368421049],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#cc37c3","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Sri Lanka"],"mode":"text","text":["Sri"],"textfont":{"color":"#cc37c3","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.056609210526315804],"y":[0.12901947368421052],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ca35c3","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["India"],"mode":"text","text":["Ind"],"textfont":{"color":"#ca35c3","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.0490292105263158],"y":[0.023699473684210492],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#c732c4","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Egypt"],"mode":"text","text":["Egy"],"textfont":{"color":"#c732c4","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.03231921052631581],"y":[-0.1906805263157895],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#c732c4","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Armenia"],"mode":"text","text":["Arm"],"textfont":{"color":"#c732c4","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.10008921052631581],"y":[-0.2387805263157895],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#c732c4","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Kenya"],"mode":"text","text":["Ken"],"textfont":{"color":"#c732c4","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.0693892105263158],"y":[0.026609473684210516],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#c530c5","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Ukraine"],"mode":"text","text":["Ukr"],"textfont":{"color":"#c530c5","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.1179592105263158],"y":[-0.2505605263157895],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#c22dc6","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Ghana"],"mode":"text","text":["Gha"],"textfont":{"color":"#c22dc6","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.10364921052631582],"y":[0.03057947368421049],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#c02bc6","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Georgia"],"mode":"text","text":["Geo"],"textfont":{"color":"#c02bc6","family":"Arial Black","size":14},"textposition":"bottom center","x":[0.18255078947368417],"y":[-0.054540526315789484],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#be2ac7","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Senegal"],"mode":"text","text":["Sen"],"textfont":{"color":"#be2ac7","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.01943921052631581],"y":[-0.06859052631578949],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#be2ac7","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Bulgaria"],"mode":"text","text":["Bul"],"textfont":{"color":"#be2ac7","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.13009921052631582],"y":[-0.1669605263157895],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#bd28c7","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Mauritania"],"mode":"text","text":["Mau"],"textfont":{"color":"#bd28c7","family":"Arial Black","size":14},"textposition":"bottom center","x":[0.04330078947368418],"y":[-0.25235052631578947],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#bd28c7","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Zimbabwe"],"mode":"text","text":["Zim"],"textfont":{"color":"#bd28c7","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.05042921052631581],"y":[-0.12486052631578948],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#b823c9","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Gabon"],"mode":"text","text":["Gab"],"textfont":{"color":"#b823c9","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.043109210526315805],"y":[-0.09817052631578949],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#b420ca","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Mali"],"mode":"text","text":["Mal"],"textfont":{"color":"#b420ca","family":"Arial Black","size":14},"textposition":"bottom center","x":[0.000220789473684202],"y":[-0.10371052631578948],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#b31eca","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Haiti"],"mode":"text","text":["Hai"],"textfont":{"color":"#b31eca","family":"Arial Black","size":14},"textposition":"bottom center","x":[0.008510789473684194],"y":[-0.2584305263157895],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#ae19cc","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Botswana"],"mode":"text","text":["Bot"],"textfont":{"color":"#ae19cc","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.028559210526315812],"y":[0.06173947368421051],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#aa16cd","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Cambodia"],"mode":"text","text":["Cam"],"textfont":{"color":"#aa16cd","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.0553292105263158],"y":[0.20936947368421055],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#a713ce","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Niger"],"mode":"text","text":["Nig"],"textfont":{"color":"#a713ce","family":"Arial Black","size":14},"textposition":"bottom center","x":[0.03551078947368419],"y":[0.0012594736842105325],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#a00ccf","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Chad"],"mode":"text","text":["Cha"],"textfont":{"color":"#a00ccf","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.0867292105263158],"y":[-0.2510805263157895],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#9e0ad0","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Burkina Faso"],"mode":"text","text":["Bur"],"textfont":{"color":"#9e0ad0","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.010919210526315809],"y":[-0.0454505263157895],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#9e0ad0","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Uganda"],"mode":"text","text":["Uga"],"textfont":{"color":"#9e0ad0","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.0718292105263158],"y":[0.05737947368421048],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#9d09d0","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Madagascar"],"mode":"text","text":["Mad"],"textfont":{"color":"#9d09d0","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.061189210526315804],"y":[-0.2423105263157895],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#9804d2","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Liberia"],"mode":"text","text":["Lib"],"textfont":{"color":"#9804d2","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.0877292105263158],"y":[-0.1216705263157895],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#9602d2","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Guinea"],"mode":"text","text":["Gui"],"textfont":{"color":"#9602d2","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.017049210526315806],"y":[-0.06962052631578947],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#9000d4","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Rwanda"],"mode":"text","text":["Rwa"],"textfont":{"color":"#9000d4","family":"Arial Black","size":14},"textposition":"bottom center","x":[0.36896078947368427],"y":[0.16404947368421052],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#8e00d5","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Benin"],"mode":"text","text":["Ben"],"textfont":{"color":"#8e00d5","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.06943921052631581],"y":[0.018319473684210497],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#8200d8","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Afghanistan"],"mode":"text","text":["Afg"],"textfont":{"color":"#8200d8","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.0651292105263158],"y":[-0.2148505263157895],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#7d00da","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Togo"],"mode":"text","text":["Tog"],"textfont":{"color":"#7d00da","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.020379210526315805],"y":[-0.032370526315789516],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#5800e5","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","hovertext":["Burundi"],"mode":"text","text":["Bur"],"textfont":{"color":"#5800e5","family":"Arial Black","size":14},"textposition":"bottom center","x":[-0.04205921052631581],"y":[-0.3359505263157895],"type":"scatter","xaxis":"x","yaxis":"y"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#5800e5","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","marker":{"color":["#ffc900","#ffc800","#ffc800","#ffc800","#ffc200","#ffc200","#ffbf00","#ffbe00","#ffbd00","#ffbb00","#ffb300","#ffb100","#ffac00","#ffaa00","#ffa900","#ffa700","#ffa600","#ffa209","#ffa00f","#ff9f12","#ff9f12","#ff9d17","#ff9a20","#ff9923","#ff9828","#ff972b","#ff972b","#ff972b","#ff9336","#ff9336","#ff913c","#ff8e44","#ff8d47","#ff8955","#ff8858","#ff865e","#ff865e","#ff8561","#ff8561","#ff8561","#ff8366","#ff8366","#ff7f72","#ff7f72","#ff7e74","#ff7d77","#ff7c7a","#ff7888","#ff768e","#ff7591","#ff7591","#ff7591","#ff7494","#ff7494","#ff7396","#ff6caa","#ff6caa","#ff6bad","#ff6bad","#ff6ab0","#fc67b5","#fc67b5","#fb65b5","#fb65b5","#fb65b5","#fb65b5","#fb65b5","#f963b6","#f963b6","#f963b6","#f660b7","#f45eb7","#f25db8","#ec56ba","#e853bb","#e853bb","#e34ebc","#e34ebc","#db46be","#d944bf","#d944bf","#d641c0","#d13cc1","#d13cc1","#cd38c2","#cc37c3","#ca35c3","#c732c4","#c732c4","#c732c4","#c530c5","#c22dc6","#c02bc6","#be2ac7","#be2ac7","#bd28c7","#bd28c7","#b823c9","#b420ca","#b31eca","#ae19cc","#aa16cd","#a713ce","#a00ccf","#9e0ad0","#9e0ad0","#9d09d0","#9804d2","#9602d2","#9000d4","#8e00d5","#8200d8","#7d00da","#5800e5"]},"mode":"markers","showlegend":false,"x":[0.44453,0.41203,0.14975,0.35776,0.41004,0.31329,0.29927,0.41904,0.40867,0.08728,0.21348,0.10547,0.28551,0.14166,0.26248,0.29754,0.35329,0.18355,0.46987,0.11451,0.08423,0.07296,0.35561,0.21394,0.17554,0.05399,0.17808,0.02833,0.30008,0.06137,0.08701,0.23669,0.25772,0.02947,0.10613,0.09081,0.16292,0.28333,0.02556,0.18037,0.18985,0.11132,0.055,0.0182,0.17457,0.03635,0.05292,0.10339,0.0889,0.05228,0.07396,0.00679,0.18519,0.04294,0.04002,0.00322,0.13297,0.17914,0.11757,0.02745,0.04762,0.04339,0.0,0.12721,0.12372,0.08404,0.04472,0.1388,0.03061,0.01521,0.11556,0.0817,0.04127,0.03285,0.0305,0.06906,0.11479,0.07008,0.05301,0.12583,0.08196,0.13636,0.06126,0.1717,0.08415,0.07964,0.08722,0.10393,0.03616,0.06686,0.01829,0.0326,0.3188,0.11681,0.00615,0.17955,0.08582,0.09314,0.13647,0.14476,0.10769,0.08092,0.17176,0.04952,0.12533,0.06442,0.07506,0.04852,0.1192,0.50521,0.06681,0.07112,0.11587,0.09419],"y":[0.57941,0.58557,0.56624,0.59609,0.57104,0.5737,0.55211,0.58147,0.58218,0.36432,0.54355,0.55225,0.53466,0.40425,0.51354,0.54008,0.5487,0.37709,0.4877,0.37789,0.48927,0.42284,0.56215,0.54388,0.54994,0.44735,0.46562,0.49553,0.37904,0.37545,0.50379,0.43166,0.47375,0.23391,0.37269,0.39031,0.46582,0.60848,0.18827,0.4027,0.46761,0.4052,0.4519,0.18929,0.29091,0.53164,0.37502,0.40672,0.27996,0.29507,0.46235,0.36712,0.41511,0.43597,0.23907,0.39237,0.36023,0.35327,0.54854,0.44012,0.40212,0.15718,0.09511,0.15111,0.52259,0.25646,0.1977,0.14622,0.26228,0.44727,0.55954,0.23553,0.05822,0.35972,0.27854,0.26755,0.42662,0.37012,0.31866,0.39778,0.30685,0.24856,0.42736,0.36703,0.42483,0.50817,0.40285,0.18847,0.14037,0.40576,0.12859,0.40973,0.32461,0.31056,0.21219,0.1268,0.25429,0.28098,0.27544,0.12072,0.44089,0.58852,0.38041,0.12807,0.3337,0.43653,0.13684,0.25748,0.30953,0.5432,0.39747,0.1643,0.34678,0.0432],"type":"scatter","xaxis":"x2","yaxis":"y2"},{"line":{"color":"black"},"mode":"lines","showlegend":false,"x":[0.44453,0.41203,0.14975,0.35776,0.41004,0.31329,0.29927,0.41904,0.40867,0.08728,0.21348,0.10547,0.28551,0.14166,0.26248,0.29754,0.35329,0.18355,0.46987,0.11451,0.08423,0.07296,0.35561,0.21394,0.17554,0.05399,0.17808,0.02833,0.30008,0.06137,0.08701,0.23669,0.25772,0.02947,0.10613,0.09081,0.16292,0.28333,0.02556,0.18037,0.18985,0.11132,0.055,0.0182,0.17457,0.03635,0.05292,0.10339,0.0889,0.05228,0.07396,0.00679,0.18519,0.04294,0.04002,0.00322,0.13297,0.17914,0.11757,0.02745,0.04762,0.04339,0.0,0.12721,0.12372,0.08404,0.04472,0.1388,0.03061,0.01521,0.11556,0.0817,0.04127,0.03285,0.0305,0.06906,0.11479,0.07008,0.05301,0.12583,0.08196,0.13636,0.06126,0.1717,0.08415,0.07964,0.08722,0.10393,0.03616,0.06686,0.01829,0.0326,0.3188,0.11681,0.00615,0.17955,0.08582,0.09314,0.13647,0.14476,0.10769,0.08092,0.17176,0.04952,0.12533,0.06442,0.07506,0.04852,0.1192,0.50521,0.06681,0.07112,0.11587,0.09419],"y":[0.585637621342094,0.5638690557437898,0.38819338235538303,0.5275189002047138,0.5625361497271552,0.4977328044460496,0.4883421801479504,0.5685643678928394,0.5616185209619342,0.34635085026535034,0.43087986498861147,0.3585345489802166,0.47912570437463764,0.3827746840264513,0.46370016389067004,0.48718342265610226,0.524524885182424,0.41083269057761934,0.6026104044885872,0.36458955922663716,0.3443079541092018,0.3367592853617283,0.5260788258651337,0.43118797391707975,0.4054675764101604,0.32405314107250277,0.40716887353692016,0.3068660212801186,0.48888471978286197,0.32899627996836384,0.3461700037203798,0.44642596983589267,0.4605119062830415,0.30762959558110525,0.35897661831236677,0.3487152513903354,0.39701467493783427,0.47766553597450523,0.30501066968912466,0.4087027201590776,0.4150524432935983,0.3624528907879113,0.3247296411110962,0.3000809268336318,0.4048178684523033,0.3122378334677617,0.3233364529128048,0.3571413607819251,0.3474359295351735,0.32290777962102274,0.33742908738013766,0.292438485803581,0.4119311658878107,0.3166518287690793,0.314696006875324,0.2900472925978596,0.37695410448647393,0.40787886367643406,0.3666391534029698,0.3062765955039184,0.31978650221523514,0.31695323967736355,0.28789053009858145,0.373096044860436,0.3707584358161874,0.344180691725704,0.317844076361848,0.3808590502538005,0.3083931698820919,0.2980782187985878,0.365292851345967,0.34261335500262613,0.3155332593983357,0.3098935264033289,0.3083194916600669,0.3341470574899318,0.3647771037917918,0.3348302555487094,0.3233967350944616,0.37217171807503113,0.34278750352741255,0.3792247333288817,0.3289226017463388,0.4028955366594684,0.34425436994772907,0.34123356284470285,0.3463106621442458,0.35750305387186615,0.3121105710842639,0.3326734930494312,0.3001412090152886,0.3097260758987266,0.5014234135674852,0.3661301038689787,0.292009812511799,0.40815348250398187,0.3453729393184727,0.3502758900932292,0.3792984115509067,0.3848510702835203,0.36002150946108535,0.3420909094282668,0.402935724780573,0.3210591260502129,0.37183681706582644,0.3310391761245124,0.33816586960038797,0.32038932403180354,0.3677309306929771,0.626281207819174,0.33264000294851076,0.33552684964785506,0.36550048997167395,0.35097918221255897],"type":"scatter","xaxis":"x2","yaxis":"y2"},{"hoverlabel":{"bgcolor":"white","font":{"color":"#5800e5","size":16}},"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e","marker":{"color":["#ffc900","#ffc800","#ffc800","#ffc800","#ffc200","#ffc200","#ffbf00","#ffbe00","#ffbd00","#ffbb00","#ffb300","#ffb100","#ffac00","#ffaa00","#ffa900","#ffa700","#ffa600","#ffa209","#ffa00f","#ff9f12","#ff9f12","#ff9d17","#ff9a20","#ff9923","#ff9828","#ff972b","#ff972b","#ff972b","#ff9336","#ff9336","#ff913c","#ff8e44","#ff8d47","#ff8955","#ff8858","#ff865e","#ff865e","#ff8561","#ff8561","#ff8561","#ff8366","#ff8366","#ff7f72","#ff7f72","#ff7e74","#ff7d77","#ff7c7a","#ff7888","#ff768e","#ff7591","#ff7591","#ff7591","#ff7494","#ff7494","#ff7396","#ff6caa","#ff6caa","#ff6bad","#ff6bad","#ff6ab0","#fc67b5","#fc67b5","#fb65b5","#fb65b5","#fb65b5","#fb65b5","#fb65b5","#f963b6","#f963b6","#f963b6","#f660b7","#f45eb7","#f25db8","#ec56ba","#e853bb","#e853bb","#e34ebc","#e34ebc","#db46be","#d944bf","#d944bf","#d641c0","#d13cc1","#d13cc1","#cd38c2","#cc37c3","#ca35c3","#c732c4","#c732c4","#c732c4","#c530c5","#c22dc6","#c02bc6","#be2ac7","#be2ac7","#bd28c7","#bd28c7","#b823c9","#b420ca","#b31eca","#ae19cc","#aa16cd","#a713ce","#a00ccf","#9e0ad0","#9e0ad0","#9d09d0","#9804d2","#9602d2","#9000d4","#8e00d5","#8200d8","#7d00da","#5800e5"]},"mode":"markers","showlegend":false,"x":[0.44453,0.41203,0.14975,0.35776,0.41004,0.31329,0.29927,0.41904,0.40867,0.08728,0.21348,0.10547,0.28551,0.14166,0.26248,0.29754,0.35329,0.18355,0.46987,0.11451,0.08423,0.07296,0.35561,0.21394,0.17554,0.05399,0.17808,0.02833,0.30008,0.06137,0.08701,0.23669,0.25772,0.02947,0.10613,0.09081,0.16292,0.28333,0.02556,0.18037,0.18985,0.11132,0.055,0.0182,0.17457,0.03635,0.05292,0.10339,0.0889,0.05228,0.07396,0.00679,0.18519,0.04294,0.04002,0.00322,0.13297,0.17914,0.11757,0.02745,0.04762,0.04339,0.0,0.12721,0.12372,0.08404,0.04472,0.1388,0.03061,0.01521,0.11556,0.0817,0.04127,0.03285,0.0305,0.06906,0.11479,0.07008,0.05301,0.12583,0.08196,0.13636,0.06126,0.1717,0.08415,0.07964,0.08722,0.10393,0.03616,0.06686,0.01829,0.0326,0.3188,0.11681,0.00615,0.17955,0.08582,0.09314,0.13647,0.14476,0.10769,0.08092,0.17176,0.04952,0.12533,0.06442,0.07506,0.04852,0.1192,0.50521,0.06681,0.07112,0.11587,0.09419],"y":[7.526,7.509,7.501,7.498,7.413,7.404,7.339,7.334,7.291,7.267,7.119,7.087,6.994,6.952,6.929,6.907,6.871,6.778,6.739,6.705,6.701,6.65,6.573,6.545,6.488,6.481,6.478,6.474,6.379,6.361,6.324,6.239,6.218,6.078,6.068,6.005,5.992,5.987,5.977,5.976,5.921,5.919,5.835,5.813,5.802,5.768,5.743,5.615,5.56,5.546,5.538,5.528,5.517,5.51,5.488,5.314,5.303,5.291,5.279,5.245,5.185,5.177,5.163,5.161,5.155,5.151,5.145,5.132,5.129,5.123,5.061,5.045,5.033,4.907,4.875,4.871,4.795,4.793,4.655,4.643,4.635,4.575,4.513,4.508,4.459,4.415,4.404,4.362,4.36,4.356,4.324,4.276,4.252,4.219,4.217,4.201,4.193,4.121,4.073,4.028,3.974,3.907,3.856,3.763,3.739,3.739,3.695,3.622,3.607,3.515,3.484,3.36,3.303,2.905],"type":"scatter","xaxis":"x3","yaxis":"y3"},{"line":{"color":"black"},"mode":"lines","showlegend":false,"x":[0.44453,0.41203,0.14975,0.35776,0.41004,0.31329,0.29927,0.41904,0.40867,0.08728,0.21348,0.10547,0.28551,0.14166,0.26248,0.29754,0.35329,0.18355,0.46987,0.11451,0.08423,0.07296,0.35561,0.21394,0.17554,0.05399,0.17808,0.02833,0.30008,0.06137,0.08701,0.23669,0.25772,0.02947,0.10613,0.09081,0.16292,0.28333,0.02556,0.18037,0.18985,0.11132,0.055,0.0182,0.17457,0.03635,0.05292,0.10339,0.0889,0.05228,0.07396,0.00679,0.18519,0.04294,0.04002,0.00322,0.13297,0.17914,0.11757,0.02745,0.04762,0.04339,0.0,0.12721,0.12372,0.08404,0.04472,0.1388,0.03061,0.01521,0.11556,0.0817,0.04127,0.03285,0.0305,0.06906,0.11479,0.07008,0.05301,0.12583,0.08196,0.13636,0.06126,0.1717,0.08415,0.07964,0.08722,0.10393,0.03616,0.06686,0.01829,0.0326,0.3188,0.11681,0.00615,0.17955,0.08582,0.09314,0.13647,0.14476,0.10769,0.08092,0.17176,0.04952,0.12533,0.06442,0.07506,0.04852,0.1192,0.50521,0.06681,0.07112,0.11587,0.09419],"y":[6.911591266039698,6.754315868591397,5.485079214968612,6.491690151067726,6.744685775024562,6.276489014928465,6.208642828090767,6.788238962010246,6.738056012116742,5.182771704857983,5.7934841712572345,5.270797534999049,6.142054844432655,5.44592973911148,6.0306070781792895,6.200270937703519,6.4700587348648355,5.648645628314845,7.03421768361939,5.314544291704668,5.168012013712835,5.113473745120762,6.481285778621146,5.795710223036503,5.609883291897587,5.021673305440939,5.622174969113546,4.897498330101756,6.212562614919478,5.0573869187691995,5.181465109248413,5.905803001250314,6.007572281506861,4.903015067119943,5.273991435377999,5.199854232642369,5.5488120452576615,6.131505294696123,4.884093626996163,5.633256835579903,5.679132859204824,5.299107106539743,5.026560940869333,4.84847679852787,5.60518922618913,4.936309058948999,5.016495315432641,5.260731909562357,5.190611278515407,5.0133981999136585,5.118312988119172,4.793261035916021,5.6565819868322365,4.9681996703085165,4.954069080753161,4.7759849384117,5.4038767174553035,5.62730456669186,5.329352375279801,4.893239796263156,4.990847327541072,4.970377329657801,4.760402575956822,5.3760026777844665,5.359113719720018,5.167092557543137,4.976813522845685,5.43208950413603,4.90853180413813,4.834007461962627,5.319625496852998,5.15576872892686,4.9601181345011724,4.919371708454567,4.907999487408305,5.094600697426967,5.315899279744223,5.099536725285344,5.016930847302498,5.369324522446662,5.157026932106446,5.420281751219911,5.056854602039374,5.591300598783695,5.1676248742729625,5.145799888350137,5.1824813502780795,5.263345100781498,4.935389602779301,5.083954362830466,4.848912330397727,4.918161897704964,6.3031532438496995,5.3256745506010095,4.790163920397039,5.629288656321208,5.1757064100803065,5.211129668828662,5.4208140679497365,5.4609313924065495,5.281540654455517,5.1519941193881005,5.5915909533636,5.000041889238049,5.366904900947457,5.0721466099143475,5.123636155417422,4.99520264623964,5.337240341367208,7.205236531183174,5.083712400680546,5.10456953800369,5.321125662182505,5.2162108739769915],"type":"scatter","xaxis":"x3","yaxis":"y3"},{"marker":{"cmax":8.526,"cmin":1.9049999999999998,"color":[7.526,7.509,7.501,7.498,7.413,7.404,7.339,7.334,7.291,7.267,7.119,7.087,6.994,6.952,6.929,6.907,6.871,6.778,6.739,6.705,6.701,6.65,6.573,6.545,6.488,6.481,6.478,6.474,6.379,6.361,6.324,6.239,6.218,6.078,6.068,6.005,5.992,5.987,5.977,5.976,5.921,5.919,5.835,5.813,5.802,5.768,5.743,5.615,5.56,5.546,5.538,5.528,5.517,5.51,5.488,5.314,5.303,5.291,5.279,5.245,5.185,5.177,5.163,5.161,5.155,5.151,5.145,5.132,5.129,5.123,5.061,5.045,5.033,4.907,4.875,4.871,4.795,4.793,4.655,4.643,4.635,4.575,4.513,4.508,4.459,4.415,4.404,4.362,4.36,4.356,4.324,4.276,4.252,4.219,4.217,4.201,4.193,4.121,4.073,4.028,3.974,3.907,3.856,3.763,3.739,3.739,3.695,3.622,3.607,3.515,3.484,3.36,3.303,2.905],"colorbar":{"ticktext":["Min","Max"],"tickvals":[2.905,7.526],"title":{"text":"Geluksscore"}},"colorscale":[[0,"#0000ff"],[0.25,"#9400d3"],[0.5,"#ff69b4"],[0.75,"#ffa500"],[1,"#ffff00"]],"showscale":true,"size":1},"mode":"markers","showlegend":false,"x":[null],"y":[null],"type":"scatter"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,0.2888888888888889],"title":{"text":"Overheidsvertrouwen"},"zeroline":true,"zerolinecolor":"black","showline":false,"showgrid":false,"linecolor":"black","mirror":true,"showticklabels":false},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Vrijheid"},"zeroline":true,"zerolinecolor":"black","showline":false,"showgrid":false,"linecolor":"black","mirror":true,"showticklabels":false},"xaxis2":{"anchor":"y2","domain":[0.35555555555555557,0.6444444444444445],"title":{"text":"Overheidsvertrouwen"}},"yaxis2":{"anchor":"x2","domain":[0.0,1.0],"title":{"text":"Vrijheid"}},"xaxis3":{"anchor":"y3","domain":[0.7111111111111111,1.0],"title":{"text":"Overheidsvertrouwen"}},"yaxis3":{"anchor":"x3","domain":[0.0,1.0],"title":{"text":"Geluksscore"}},"title":{"text":"Overheidsvertrouwen en vrijheid"},"showlegend":false,"plot_bgcolor":"white","paper_bgcolor":"white","width":1200,"height":500},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('ce397953-dd95-4bf0-ad4e-f3290236babd');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };                });            </script>        </div></div></div>
+</div>
+<p>Grafiek 2: De gele punten in het rechterbovenkwadrant, die hogere geluksscores vertegenwoordigen, suggereren dat landen met hogere niveaus van overheidsvertrouwen en vrijheid over het algemeen gelukkiger zijn. Deze landen worden gekenmerkt als “blij”. Daarentegen duiden de donkere punten in het linkeronderkwadrant, met lagere geluksscores, op lagere niveaus van overheidsvertrouwen en vrijheid, en worden ze beschouwd als “niet blij”. Het ontbreken van vrijheid kan leiden tot een gevoel van ontevredenheid en kan het vertrouwen in de overheid ondermijnen, wat op zijn beurt het algemene geluksniveau kan beïnvloeden.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">plotly.graph_objects</span> <span class="k">as</span> <span class="nn">go</span>
+
+<span class="c1"># Lees het CSV-bestand met gegevens over landen</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\tatum\Downloads\merged_df_happy_2019.csv&quot;</span><span class="p">)</span>
+
+<span class="c1"># Creëer de grafiek met behulp van Plotly</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;GDP per capita&#39;</span><span class="p">],</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;freedom&#39;</span><span class="p">],</span>
+    <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;markers&#39;</span><span class="p">,</span>
+    <span class="n">text</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Country&#39;</span><span class="p">],</span>
+    <span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+        <span class="n">size</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;happiness_score&#39;</span><span class="p">]</span><span class="o">*</span><span class="mi">10</span><span class="p">,</span>
+        <span class="n">color</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;happiness_score&#39;</span><span class="p">],</span>
+        <span class="n">colorscale</span><span class="o">=</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;#0000ff&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.25</span><span class="p">,</span> <span class="s1">&#39;#9400d3&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="s1">&#39;#ff69b4&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.75</span><span class="p">,</span> <span class="s1">&#39;#ffa500&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;#ffff00&#39;</span><span class="p">]],</span>
+        <span class="n">showscale</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">colorbar</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+            <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Geluksscore&#39;</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+<span class="p">))</span>
+
+<span class="c1"># Pas de opmaak van de grafiek aan</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s1">&#39;GDP per capita en geluksscore&#39;</span><span class="p">,</span>
+    <span class="n">xaxis</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+        <span class="n">title</span><span class="o">=</span><span class="s1">&#39;GDP per capita&#39;</span>
+    <span class="p">),</span>
+    <span class="n">yaxis</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+        <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Vrijheid&#39;</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+
+<span class="c1"># Toon de interactieve grafiek</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>                            <div id="31d449d1-eb1b-4230-b090-d1f85e7a1251" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("31d449d1-eb1b-4230-b090-d1f85e7a1251")) {                    Plotly.newPlot(                        "31d449d1-eb1b-4230-b090-d1f85e7a1251",                        [{"marker":{"color":[7.413,7.526,7.498,7.501,7.339,7.509,7.291,7.334,7.404,7.119,7.313,7.087,7.267,6.871,6.725,6.907,6.994,6.929,7.104,6.573,6.488,6.778,6.478,6.705,6.324,6.379,6.361,6.701,6.952,6.545,6.739,6.068,5.977,6.218,6.078,5.835,5.987,5.813,6.481,5.768,5.992,5.401,6.65,5.528,5.546,5.976,6.239,6.474,5.56,5.517,5.51,5.648,5.921,4.871,5.919,5.822,5.145,5.538,5.743,5.123,5.132,5.856,5.279,5.177,5.897,5.615,5.161,4.996,5.488,5.155,5.163,5.389,6.005,5.802,5.033,4.907,4.875,5.185,5.658,6.355,5.151,5.291,5.129,5.314,5.245,5.061,4.513,4.217,4.276,4.793,5.303,3.484,4.121,4.459,4.655,6.084,3.907,4.219,3.856,3.739,4.36,4.813,3.607,4.252,4.356,4.201,5.045,4.643,4.575,4.073,4.635,4.415,4.395,3.763,4.324,4.508,3.739,4.362,4.795,3.303,4.404,3.622,3.695,2.905,4.193,4.028,3.974,4.156,3.724,3.515,3.666,3.36],"colorbar":{"title":{"text":"Geluksscore"}},"colorscale":[[0,"#0000ff"],[0.25,"#9400d3"],[0.5,"#ff69b4"],[0.75,"#ffa500"],[1,"#ffff00"]],"showscale":true,"size":[74.13,75.25999999999999,74.98,75.01,73.39,75.09,72.91,73.34,74.03999999999999,71.19,73.13,70.87,72.67,68.71000000000001,67.25,69.07,69.94,69.29,71.04,65.73,64.88000000000001,67.78,64.78,67.05,63.239999999999995,63.78999999999999,63.61,67.00999999999999,69.52,65.45,67.39,60.67999999999999,59.77,62.18,60.78,58.35,59.870000000000005,58.129999999999995,64.81,57.68,59.92,54.01,66.5,55.279999999999994,55.46,59.76,62.39,64.74000000000001,55.599999999999994,55.17,55.099999999999994,56.48,59.21,48.71000000000001,59.19,58.22,51.449999999999996,55.38,57.43000000000001,51.230000000000004,51.31999999999999,58.56,52.79,51.769999999999996,58.97,56.150000000000006,51.61,49.96000000000001,54.88,51.550000000000004,51.63,53.89,60.05,58.019999999999996,50.330000000000005,49.07,48.75,51.849999999999994,56.580000000000005,63.550000000000004,51.51,52.910000000000004,51.28999999999999,53.14,52.45,50.61,45.129999999999995,42.169999999999995,42.76,47.93,53.03,34.84,41.21000000000001,44.589999999999996,46.550000000000004,60.839999999999996,39.07,42.190000000000005,38.56,37.39,43.6,48.129999999999995,36.07,42.519999999999996,43.56,42.01,50.45,46.43,45.75,40.730000000000004,46.349999999999994,44.15,43.949999999999996,37.629999999999995,43.239999999999995,45.08,37.39,43.620000000000005,47.95,33.03,44.04,36.22,36.949999999999996,29.049999999999997,41.92999999999999,40.279999999999994,39.74,41.559999999999995,37.24,35.15,36.66,33.6]},"mode":"markers","text":["Finland","Denmark","Norway","Iceland","Netherlands","Switzerland","Sweden","New Zealand","Canada","Austria","Australia","Costa Rica","Israel","Luxembourg","United Kingdom","Ireland","Germany","Belgium","United States","United Arab Emirates","Malta","Mexico","France","Chile","Guatemala","Saudi Arabia","Spain","Panama","Brazil","Uruguay","Singapore","El Salvador","Italy","Bahrain","Slovakia","Poland","Uzbekistan","Lithuania","Colombia","Slovenia","Nicaragua","Kosovo","Argentina","Romania","Cyprus","Ecuador","Kuwait","Thailand","Latvia","Estonia","Jamaica","Mauritius","Japan","Honduras","Kazakhstan","Bolivia","Hungary","Paraguay","Peru","Portugal","Pakistan","Russia","Philippines","Serbia","Moldova","Libya","Montenegro","Tajikistan","Croatia","Dominican Republic","Bosnia and Herzegovina","Turkey","Malaysia","Belarus","Greece","Mongolia","Nigeria","Kyrgyzstan","Turkmenistan","Algeria","Morocco","Azerbaijan","Lebanon","Indonesia","China","Vietnam","Cameroon","Bulgaria","Ghana","Nepal","Jordan","Benin","Gabon","South Africa","Albania","Venezuela","Cambodia","Senegal","Niger","Burkina Faso","Armenia","Iran","Guinea","Georgia","Kenya","Mauritania","Tunisia","Bangladesh","Iraq","Mali","Sierra Leone","Sri Lanka","Myanmar","Chad","Ukraine","Ethiopia","Uganda","Egypt","Zambia","Togo","India","Liberia","Madagascar","Burundi","Zimbabwe","Haiti","Botswana","Malawi","Yemen","Rwanda","Tanzania","Afghanistan"],"x":[1.34,1.383,1.488,1.38,1.396,1.452,1.387,1.303,1.365,1.376,1.372,1.034,1.276,1.609,1.333,1.499,1.373,1.356,1.433,1.503,1.3,1.07,1.324,1.159,0.8,1.403,1.286,1.149,1.004,1.124,1.572,0.794,1.294,1.362,1.246,1.206,0.745,1.238,0.985,1.258,0.694,0.882,1.092,1.162,1.263,0.912,1.5,1.05,1.187,1.237,0.831,1.12,1.327,0.642,1.173,0.776,1.201,0.855,0.96,1.221,0.677,1.183,0.807,1.004,0.685,1.044,1.051,0.493,1.155,1.015,0.945,1.183,1.221,1.067,1.181,0.948,0.696,0.551,1.052,1.002,0.801,1.043,0.987,0.931,1.029,0.741,0.549,1.092,0.611,0.446,0.837,0.393,1.057,0.96,0.947,0.96,0.574,0.45,0.138,0.331,0.85,1.1,0.38,0.886,0.512,0.57,0.921,0.562,1.043,0.385,0.268,0.949,0.71,0.35,0.82,0.336,0.332,0.913,0.578,0.275,0.755,0.073,0.274,0.046,0.366,0.323,1.041,0.191,0.287,0.359,0.476,0.35],"y":[0.57104,0.57941,0.59609,0.56624,0.55211,0.58557,0.58218,0.58147,0.5737,0.54355,0.56837,0.55225,0.36432,0.5487,0.50036,0.54008,0.53466,0.51354,0.48163,0.56215,0.54994,0.37709,0.46562,0.37789,0.50379,0.37904,0.37545,0.48927,0.40425,0.54388,0.4877,0.37269,0.18827,0.47375,0.23391,0.4519,0.60848,0.18929,0.44735,0.53164,0.46582,0.14396,0.42284,0.36712,0.29507,0.4027,0.43166,0.49553,0.27996,0.41511,0.43597,0.46145,0.46761,0.26755,0.4052,0.50961,0.1977,0.46235,0.37502,0.44727,0.14622,0.32682,0.54854,0.15718,0.25202,0.40672,0.15111,0.43408,0.23907,0.52259,0.09511,0.23889,0.39031,0.29091,0.05822,0.35972,0.27854,0.40212,0.37408,0.21006,0.25646,0.35327,0.26228,0.39237,0.44012,0.55954,0.42736,0.21219,0.40973,0.37012,0.36023,0.39747,0.28098,0.42483,0.31866,0.19847,0.58852,0.31056,0.38041,0.3337,0.14037,0.22544,0.30953,0.32461,0.40576,0.1268,0.23553,0.39778,0.24856,0.27544,0.30685,0.50817,0.42692,0.12807,0.12859,0.36703,0.43653,0.18847,0.42662,0.34678,0.40285,0.25748,0.13684,0.0432,0.25429,0.12072,0.44089,0.4143,0.2287,0.5432,0.3176,0.1643],"type":"scatter"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"title":{"text":"GDP per capita en geluksscore"},"xaxis":{"title":{"text":"GDP per capita"}},"yaxis":{"title":{"text":"Vrijheid"}}},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('31d449d1-eb1b-4230-b090-d1f85e7a1251');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };                });            </script>        </div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">plotly.graph_objects</span> <span class="k">as</span> <span class="nn">go</span>
+
+<span class="c1"># Lees het CSV-bestand met gegevens over landen</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\tatum\Downloads\merged_df_happy_2019.csv&quot;</span><span class="p">)</span>
+
+<span class="c1"># Kies een drempelwaarde voor GDP per capita</span>
+<span class="n">threshold</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="c1"># Maak een nieuwe kolom met de groepsnaam</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;group&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;GDP per capita&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s1">&#39;Laag&#39;</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">threshold</span> <span class="k">else</span> <span class="s1">&#39;Hoog&#39;</span><span class="p">)</span>
+
+<span class="c1"># Maak een lege figuur</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
+
+<span class="c1"># Voeg voor elke groep een boxplot toe voor geluksscore</span>
+<span class="k">for</span> <span class="n">group</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Laag&#39;</span><span class="p">,</span> <span class="s1">&#39;Hoog&#39;</span><span class="p">]:</span>
+    <span class="c1"># Filter de dataframe op groep</span>
+    <span class="n">df_group</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;group&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">group</span><span class="p">]</span>
+    
+    <span class="c1"># Voeg een boxplot toe voor geluksscore</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Box</span><span class="p">(</span>
+        <span class="n">y</span><span class="o">=</span><span class="n">df_group</span><span class="p">[</span><span class="s1">&#39;happiness_score&#39;</span><span class="p">],</span>
+        <span class="n">name</span><span class="o">=</span><span class="n">group</span><span class="p">,</span>
+        <span class="n">marker_color</span><span class="o">=</span><span class="s1">&#39;#ff69b4&#39;</span> <span class="k">if</span> <span class="n">group</span> <span class="o">==</span> <span class="s1">&#39;Laag&#39;</span> <span class="k">else</span> <span class="s1">&#39;#9400d3&#39;</span><span class="p">,</span>
+        <span class="n">boxmean</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">boxpoints</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">,</span>
+        <span class="n">jitter</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">pointpos</span><span class="o">=-</span><span class="mf">1.8</span>
+    <span class="p">))</span>
+
+<span class="c1"># Pas de opmaak van de grafiek aan</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Geluksscore per GDP per capita groep&#39;</span><span class="p">,</span>
+    <span class="n">yaxis</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+        <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Geluksscore&#39;</span>
+    <span class="p">),</span>
+    <span class="n">xaxis</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+        <span class="n">title</span><span class="o">=</span><span class="s1">&#39;GDP per capita groep&#39;</span>
+    <span class="p">),</span>
+    <span class="n">boxmode</span><span class="o">=</span><span class="s1">&#39;group&#39;</span><span class="p">,</span>
+    <span class="n">plot_bgcolor</span><span class="o">=</span><span class="s1">&#39;white&#39;</span>
+<span class="p">)</span>
+
+<span class="c1"># Toon de interactieve grafiek</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>                            <div id="7382f25d-5d74-4594-a184-c51a3bca710f" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("7382f25d-5d74-4594-a184-c51a3bca710f")) {                    Plotly.newPlot(                        "7382f25d-5d74-4594-a184-c51a3bca710f",                        [{"boxmean":true,"boxpoints":"all","jitter":1,"marker":{"color":"#ff69b4"},"name":"Laag","pointpos":-1.8,"y":[6.324,6.068,5.987,6.481,5.992,5.401,5.976,5.51,4.871,5.822,5.538,5.743,5.132,5.279,5.897,4.996,5.163,4.907,4.875,5.185,5.151,5.129,5.314,5.061,4.513,4.276,4.793,5.303,3.484,4.459,4.655,6.084,3.907,4.219,3.856,3.739,4.36,3.607,4.252,4.356,4.201,5.045,4.643,4.073,4.635,4.415,4.395,3.763,4.324,4.508,3.739,4.362,4.795,3.303,4.404,3.622,3.695,2.905,4.193,4.028,4.156,3.724,3.515,3.666,3.36],"type":"box"},{"boxmean":true,"boxpoints":"all","jitter":1,"marker":{"color":"#9400d3"},"name":"Hoog","pointpos":-1.8,"y":[7.413,7.526,7.498,7.501,7.339,7.509,7.291,7.334,7.404,7.119,7.313,7.087,7.267,6.871,6.725,6.907,6.994,6.929,7.104,6.573,6.488,6.778,6.478,6.705,6.379,6.361,6.701,6.952,6.545,6.739,5.977,6.218,6.078,5.835,5.813,5.768,6.65,5.528,5.546,6.239,6.474,5.56,5.517,5.648,5.921,5.919,5.145,5.123,5.856,5.177,5.615,5.161,5.488,5.155,5.389,6.005,5.802,5.033,5.658,6.355,5.291,5.245,4.217,4.121,4.813,4.575,3.974],"type":"box"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"title":{"text":"Geluksscore per GDP per capita groep"},"yaxis":{"title":{"text":"Geluksscore"}},"xaxis":{"title":{"text":"GDP per capita groep"}},"boxmode":"group","plot_bgcolor":"white"},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('7382f25d-5d74-4594-a184-c51a3bca710f');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };                });            </script>        </div></div></div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Yen-Chia Hsu
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
