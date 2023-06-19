@@ -390,6 +390,187 @@ document.write(`
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;final_dataframe.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Country</th>
+      <th>happiness_score</th>
+      <th>gdp_per_capita</th>
+      <th>family</th>
+      <th>health</th>
+      <th>freedom</th>
+      <th>generosity</th>
+      <th>government_trust</th>
+      <th>dystopia_residual</th>
+      <th>continent</th>
+      <th>...</th>
+      <th>Poisonings</th>
+      <th>Falls</th>
+      <th>Fire, heat and hot substances</th>
+      <th>Drowning</th>
+      <th>Exposure to mechanical forces</th>
+      <th>Natural disasters</th>
+      <th>Other unintentional injuries</th>
+      <th>Self-harm</th>
+      <th>Interpersonal violence</th>
+      <th>Collective violence and legal intervention</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Denmark</td>
+      <td>7.526</td>
+      <td>1.44178</td>
+      <td>1.16374</td>
+      <td>0.79504</td>
+      <td>0.57941</td>
+      <td>0.36171</td>
+      <td>0.44453</td>
+      <td>2.73939</td>
+      <td>Europe</td>
+      <td>...</td>
+      <td>0.002780</td>
+      <td>0.270353</td>
+      <td>0.026409</td>
+      <td>0.018608</td>
+      <td>0.009577</td>
+      <td>0.000000</td>
+      <td>0.173566</td>
+      <td>0.308668</td>
+      <td>0.031507</td>
+      <td>0.000295</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Switzerland</td>
+      <td>7.509</td>
+      <td>1.52733</td>
+      <td>1.14524</td>
+      <td>0.86303</td>
+      <td>0.58557</td>
+      <td>0.28083</td>
+      <td>0.41203</td>
+      <td>2.69463</td>
+      <td>Europe</td>
+      <td>...</td>
+      <td>0.006472</td>
+      <td>0.959653</td>
+      <td>0.010671</td>
+      <td>0.024640</td>
+      <td>0.017170</td>
+      <td>0.001957</td>
+      <td>0.204806</td>
+      <td>0.624527</td>
+      <td>0.021167</td>
+      <td>0.000441</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Iceland</td>
+      <td>7.501</td>
+      <td>1.42666</td>
+      <td>1.18326</td>
+      <td>0.86733</td>
+      <td>0.56624</td>
+      <td>0.47678</td>
+      <td>0.14975</td>
+      <td>2.83137</td>
+      <td>Europe</td>
+      <td>...</td>
+      <td>0.001614</td>
+      <td>0.011843</td>
+      <td>0.000269</td>
+      <td>0.000456</td>
+      <td>0.000284</td>
+      <td>0.000000</td>
+      <td>0.025007</td>
+      <td>0.020120</td>
+      <td>0.002005</td>
+      <td>0.000020</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Norway</td>
+      <td>7.498</td>
+      <td>1.57744</td>
+      <td>1.12690</td>
+      <td>0.79579</td>
+      <td>0.59609</td>
+      <td>0.37895</td>
+      <td>0.35776</td>
+      <td>2.66465</td>
+      <td>Europe</td>
+      <td>...</td>
+      <td>0.007180</td>
+      <td>0.388723</td>
+      <td>0.022298</td>
+      <td>0.032322</td>
+      <td>0.013167</td>
+      <td>0.000000</td>
+      <td>0.291474</td>
+      <td>0.316696</td>
+      <td>0.015968</td>
+      <td>0.000268</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Finland</td>
+      <td>7.413</td>
+      <td>1.40598</td>
+      <td>1.13464</td>
+      <td>0.81091</td>
+      <td>0.57104</td>
+      <td>0.25492</td>
+      <td>0.41004</td>
+      <td>2.82596</td>
+      <td>Europe</td>
+      <td>...</td>
+      <td>0.012392</td>
+      <td>0.662584</td>
+      <td>0.030798</td>
+      <td>0.052981</td>
+      <td>0.018789</td>
+      <td>0.000000</td>
+      <td>0.218373</td>
+      <td>0.423061</td>
+      <td>0.032139</td>
+      <td>0.000278</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 167 columns</p>
+</div></div></div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
