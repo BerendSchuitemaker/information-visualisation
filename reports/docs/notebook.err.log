@@ -1,4 +1,15 @@
 Traceback (most recent call last):
+  File "C:\Users\Berend\anaconda3\envs\jupyterbook\lib\site-packages\nbclient\client.py", line 778, in _async_poll_for_reply
+    msg = await ensure_async(self.kc.shell_channel.get_msg(timeout=new_timeout))
+  File "C:\Users\Berend\anaconda3\envs\jupyterbook\lib\site-packages\jupyter_core\utils\__init__.py", line 182, in ensure_async
+    result = await obj
+  File "C:\Users\Berend\anaconda3\envs\jupyterbook\lib\site-packages\jupyter_client\channels.py", line 315, in get_msg
+    raise Empty
+_queue.Empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
   File "C:\Users\Berend\anaconda3\envs\jupyterbook\lib\site-packages\jupyter_cache\executors\utils.py", line 58, in single_nb_execution
     executenb(
   File "C:\Users\Berend\anaconda3\envs\jupyterbook\lib\site-packages\nbclient\client.py", line 1305, in execute
@@ -9,12 +20,16 @@ Traceback (most recent call last):
     return future.result()
   File "C:\Users\Berend\anaconda3\envs\jupyterbook\lib\site-packages\nbclient\client.py", line 705, in async_execute
     await self.async_execute_cell(
-  File "C:\Users\Berend\anaconda3\envs\jupyterbook\lib\site-packages\nbclient\client.py", line 1058, in async_execute_cell
-    await self._check_raise_for_error(cell, cell_index, exec_reply)
-  File "C:\Users\Berend\anaconda3\envs\jupyterbook\lib\site-packages\nbclient\client.py", line 914, in _check_raise_for_error
-    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
-nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
-------------------
+  File "C:\Users\Berend\anaconda3\envs\jupyterbook\lib\site-packages\nbclient\client.py", line 1001, in async_execute_cell
+    exec_reply = await self.task_poll_for_reply
+  File "C:\Users\Berend\anaconda3\envs\jupyterbook\lib\site-packages\nbclient\client.py", line 802, in _async_poll_for_reply
+    error_on_timeout_execute_reply = await self._async_handle_timeout(timeout, cell)
+  File "C:\Users\Berend\anaconda3\envs\jupyterbook\lib\site-packages\nbclient\client.py", line 852, in _async_handle_timeout
+    raise CellTimeoutError.error_from_timeout_and_cell(
+nbclient.exceptions.CellTimeoutError: A cell timed out while it was being executed, after 30 seconds.
+The message was: Cell execution timed out.
+Here is a preview of the cell contents:
+-------------------
 import pandas as pd
 import plotly.graph_objects as go
 import plotly.express as px
@@ -24,16 +39,5 @@ from matplotlib.colors import LinearSegmentedColormap
 from plotly.subplots import make_subplots
 from scipy.stats import linregress
 import geopandas as gpd
-------------------
-
-
-[1;31m---------------------------------------------------------------------------[0m
-[1;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Cell [1;32mIn[2], line 8[0m
-[0;32m      6[0m [38;5;28;01mfrom[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mcolors[39;00m [38;5;28;01mimport[39;00m LinearSegmentedColormap
-[0;32m      7[0m [38;5;28;01mfrom[39;00m [38;5;21;01mplotly[39;00m[38;5;21;01m.[39;00m[38;5;21;01msubplots[39;00m [38;5;28;01mimport[39;00m make_subplots
-[1;32m----> 8[0m [38;5;28;01mfrom[39;00m [38;5;21;01mscipy[39;00m[38;5;21;01m.[39;00m[38;5;21;01mstats[39;00m [38;5;28;01mimport[39;00m linregress
-[0;32m      9[0m [38;5;28;01mimport[39;00m [38;5;21;01mgeopandas[39;00m [38;5;28;01mas[39;00m [38;5;21;01mgpd[39;00m
-
-[1;31mModuleNotFoundError[0m: No module named 'scipy'
+-------------------
 
